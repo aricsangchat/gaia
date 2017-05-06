@@ -1,0 +1,211 @@
+body {
+  background-color: #fff;
+  margin: 0;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header__top {
+  padding: 0 3.31126%;
+  height: 60px;
+}
+
+.header__branding {
+  float: left;
+}
+
+.header__actions {
+  float: right;
+}
+
+.user-menu {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.user-menu__username {
+  display: inline-block;
+  vertical-align: middle;
+  color: #44576b;
+  font-size: 14px;
+}
+
+.user-menu__avatar {
+  width: 28px;
+  height: 28px;
+  background-image: url(https://webapp-assets.gaia.com/425bedd9ff70c9d3f4aec05e43cb08e1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hamburger {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header__hamburger {
+    float: left;
+    margin: 17px 25px 0 0;
+}
+
+@media (min-width: 819px) {
+  .header__hamburger {
+      display: none;
+  }
+}
+
+.hamburger__top {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 1.5px;
+  background-color: #5c738a;
+  z-index: 1;
+  top: 2px;
+}
+
+.hamburger__middle {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 1.5px;
+    background-color: #5c738a;
+    z-index: 1;
+    top: 10px;
+}
+
+.hamburger__bottom {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 1.5px;
+    background-color: #5c738a;
+    z-index: 1;
+    bottom: 4px;
+}
+
+@media (max-width: 818px) {
+  .navigation--mobile-hidden {
+      display: none;
+  }
+}
+
+.navigation {
+  background-color: #f4f5f6;
+  border-top: 1px solid #d1d9e2;
+  position: relative;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+}
+
+.menu__item {
+  display: inline-block;
+}
+
+.menu__item--link {
+  margin-right: 15px;
+  font-size: 15px;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 5px;
+  color: #44576b;
+}
+
+.nav__searchform {
+  position: absolute;
+  top: 11px;
+  right: 6%;
+  display: table;
+}
+
+.nav__searchform--input {
+  display: table-cell;
+
+  .form__input {
+    border-right: none;
+    -webkit-appearance: inherit;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    cursor: auto;
+    padding: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ddd;
+    border-image: none;
+  }
+}
+
+.nav__searchform--submit {
+  display: table-cell;
+
+  .btn {
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ddd;
+    border-image: none;
+    border-left: none;
+  }
+}
+
+.jumbotron-subcategory {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  overflow: auto;
+  width: 100%;
+  padding: 8%;
+
+  @media (min-width: 819px) {
+    padding: 4%;
+    height: 300px;
+  }
+}
+
+.jumbotron-subcategory__title {
+  color: #fff;
+  margin: 0;
+  font-size: 40px;
+  line-height: 42px;
+  text-align: center;
+
+  @media (min-width: 819px) {
+    text-align: left;
+  }
+}
+
+.jumbotron-subcategory__description {
+  color: #fff;
+  width: 75%;
+  margin: 20px auto;
+  text-align: center;
+
+  @media (min-width: 819px) {
+    text-align: left;
+    width: 50%;
+    margin: 20px 0;
+  }
+}
