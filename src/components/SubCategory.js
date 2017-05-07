@@ -11,17 +11,17 @@ class SubCategory extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     // const category = this.props.match.params.cat;
     // console.log(category);
-    this.props.actions.loadInitialVideos(16);
+    //this.props.actions.loadInitialVideos(16);
   }
 
   render() {
     return (
       <main>
         <JumbotronSubCategory term={ this.props.videos.term }/>
-        <VideoList videos={ this.props.videos.titles } />
+        <VideoList videos={ this.props.videos.toShow } hideLoadMore={ this.props.videos.atEnd } />
       </main>
     );
   }
@@ -31,7 +31,7 @@ SubCategory.propTypes = {
   actions: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state, ) {
+function mapStateToProps(state) {
   return {
     videos: state.videos
   };
