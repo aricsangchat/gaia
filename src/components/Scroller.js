@@ -35,6 +35,16 @@ const Scroller = () => {
   	return -c/2 * (t*(t-2) - 1) + b;
   };
 
+  window.onscroll = () => showToTopBtn();
+
+  function showToTopBtn() {
+    if (document.body.scrollTop > window.outerHeight) {
+      document.querySelector('.btn__to-top').classList.add('show');
+    } else {
+      document.querySelector('.btn__to-top').classList.remove('show');
+    }
+  }
+
   return (
     <a className="btn__to-top" onClick={() => scroller()}>Up</a>
   );

@@ -11,17 +11,24 @@ class SubCategory extends React.Component {
     super(props);
   }
 
-  componentWillMount() {
-    // const category = this.props.match.params.cat;
-    // console.log(category);
-    //this.props.actions.loadInitialVideos(16);
-  }
-
   render() {
+    let videos;
+    if ( this.props.videos.sortBy === 'recommended' ) {
+      videos = this.props.videos.toShow;
+
+    } else if (this.props.videos.sortBy === 'alphabetical') {
+      videos = [...this.props.videos.toShow].sort(function (a,b) {
+        if (a.title > b.title) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    }
     return (
       <main>
         <JumbotronSubCategory term={ this.props.videos.term }/>
-        <VideoList videos={ this.props.videos.toShow } hideLoadMore={ this.props.videos.atEnd } />
+        <VideoList videos={ videos } hideLoadMore={ this.props.videos.atEnd } sortBy={ this.props.videos.sortBy } />
       </main>
     );
   }

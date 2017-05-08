@@ -212,10 +212,12 @@ a {
 
 .video-list-item {
   width: 100%;
+  padding: 15px;
 
   @media (min-width: 569px) and (max-width: 818px) {
     width: 50%;
     float: left;
+    padding: 10px;
 
     &:nth-child(2n + 1) {
       clear: both;
@@ -225,6 +227,7 @@ a {
   @media (min-width: 819px) {
     width: 25%;
     float: left;
+    padding: 20px;
 
     &:nth-child(4n + 1) {
       clear: both;
@@ -240,7 +243,7 @@ a {
 }
 
 .video-list-item__tile {
-
+  position: relative;
 }
 
 .video-list-item__background {
@@ -277,4 +280,41 @@ a {
   right: 20px;
   text-align: center;
   padding-top: 10px;
+  color: #fff;
+  opacity: 0;
+}
+
+.btn__to-top.show {
+  opacity: 1;
+}
+
+.video-list-item__new-label {
+  position: absolute;
+  top: 9px;
+  left: -3px;
+  background-color: #00c9c9;
+  padding: 2px 12px;
+  color: #fff;
+
+  p {
+    margin: 0px;
+  }
+}
+
+.video-list-item__series-title {
+  display: inline-block;
+}
+
+.video-list-item__up-count {
+  float: right;
+  display: inline-block;
+}
+
+.video-list-item__title {
+  margin-top: 0px;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }

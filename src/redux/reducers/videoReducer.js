@@ -11,7 +11,8 @@ export default function videoReducer(state = initialState.videos, action) {
         const showMore = state.toShow.concat(state.titles.slice(action.current, state.titles.length));
         return Object.assign({}, state, { count: action.upTo, toShow: showMore, atEnd: true });
       }
-
+    case types.SORT:
+      return Object.assign({}, state, { sortBy: action.value });
     default:
       const toShow = state.titles.slice(0, 16);
       return Object.assign({}, state, { count: 16, toShow: toShow, atEnd: false });

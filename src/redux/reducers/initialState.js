@@ -1,6 +1,7 @@
 export default {
   videos:
   {
+    sortBy: 'recommended',
     "currentPage": 0,
     "totalCount": "150",
     "term": {
